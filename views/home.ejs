@@ -1,0 +1,68 @@
+<%- include('partials/header.ejs'); -%>
+<section id="home">
+    <div class="home-wrapper container">
+        <div class="home-text">
+        <h2>Publish your passions, your way</h2>
+        <p><%= startingContent %></p>
+        <a href="compose" Class="create-btn">CREATE YOUR BLOG</a>
+    </div>
+    <div class="home-img">
+        <img src="/images/home.png" alt="home-image">
+    </div>
+    </div>
+</section>
+<section id="post-menu">
+    <h1 class="post-menu-heading">
+        Recent Post's
+    </h1>
+    <div class="post-menu-container container">
+        <% posts.forEach(function(post){ %>
+        <div class="post-menu-item">
+           
+        <div class="post-image">
+            <img src= "/uploads/<%=post.image%>" class="image-post">
+        </div>
+        <div class="post-menu-discription">
+            <h2 class="post-title"><%=post.title%></h2>
+            <p class="post-title-p"><%= post.content.substring(0, 200) +" " %><a href="/posts/<%=post._id%>" class="post-read">Continue reading..</a> </p>
+           
+        </div>
+       
+     </div>
+     <% })%>
+     </div>
+  
+ </section>
+ <section id="homeabt">
+    <h2 class="homeabt-title">What makes us different</h2>
+    <div class="homeabt-container container">
+        <div class="homeabt-box">
+           <div class="customer-photo">
+            <i class="fas fa-pen-square fa-5x home-fa"></i>
+           <p class="customer-name">Grow as a blogger</p>
+           </div>
+            <p class="homeabt-text">Get immediate exposure with your first upload. Our Pulse algorithm surfaces new blogs and bloggers, ensuring your blogs are read by the community so you receive valuable feedback on day one.</p>
+            
+            </div>
+            <div class="homeabt-box">
+               <div class="customer-photo">
+                <i class="fas fa-briefcase fa-5x home-fa"></i>
+               <p class="customer-name">Build your career</p>
+               </div>
+                <p class="homeabt-text">Present yourself as a professional. Get hired by displaying your Services, create a Directory listing, showcase the Workshops you're holding, and create Galleries to highlight your work.</p>
+                
+                </div>
+                <div class="homeabt-box">
+                   <div class="customer-photo">
+                    <i class="fas fa-chart-line fa-5x home-fa"></i>
+                   <p class="customer-name">See your performance</p>
+                   </div>
+                    <p class="homeabt-text">With Statistics and Pulse you get valuable insights into how your blogs are performing and how you rank in comparison to other bloggers in the community.</p>
+                   
+                    </div>
+                    </div>
+                    
+</section>
+
+
+<%- include('partials/footer.ejs'); -%>

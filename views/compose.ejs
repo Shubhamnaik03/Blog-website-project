@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs'); %>
+<section id="compose">
+  <div class="compose-container container">
+      <div class="form-container">
+          <h2>Create new blog</h2>
+          <form action="/compose" method="post" enctype="multipart/form-data">
+          <label id="files">Post an image</label>
+          <input type="file" class="file-input" name="imageContent" id="files" required/>
+          <input type="text" name="textContent" class="form-post"  autocomplete="off" placeholder="Title for Blog" id="" required>
+          <textarea name="postContent" class="form-post"  autocomplete="off" placeholder="Type Your Blog Here" id="" cols="30" rows="15" required></textarea>
+          <button type="submit" name="button" class="btn btn-primary">PUBLISH YOU BLOG</button>
+      </form>
+      </div>
+  </div>
+</section>
+
+<%- include('partials/footer.ejs'); %>

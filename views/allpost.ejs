@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs'); %>
+
+    <section id="about-us-home">
+        <div class="about-us-home-container container">
+            <div class="about-delete">
+                <table>
+                    <%  posts.forEach(function(post){ %>
+                    <form action="/delete" method="post">
+                    <tr>
+                        <td><%=post.title%></td>
+                        <td class="input-delete"><i class="far fa-trash-alt fa-2x delete"></i><input type="checkbox" class="check" name="checkbox" value="<%=post._id%>" onChange="this.form.submit()"></td>
+                    </tr>
+                 
+        </form>
+        <%  }); %> 
+        <tr>
+            <td></td>
+            <td class="input-delete"><a href="/" class="btn btn-primary">Back</a></td>
+        </tr>
+    </table>
+       
+    </div>
+      
+        </div>
+    </section>
+
+
+   
+<%- include('partials/footer.ejs'); %>
+ 

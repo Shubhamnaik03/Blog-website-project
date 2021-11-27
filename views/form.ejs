@@ -1,0 +1,38 @@
+<%- include('partials/header.ejs'); %>
+      
+<section id="about-us-home-login">
+    <div class="about-us-home-container container">
+        <div class="about-delete">
+<div class="form-login">
+    <h1 class="heading-login">Welcome to Admin Page</h1>
+    <form name="formName" action="/allpost" onsubmit="return matchpass()"> 
+        <p class="admin-p">Username</p>
+<input type="text" name="userName"class="sign-form " placeholder="Enter your username" autocomplete="off" required > 
+<p class="admin-p">Password</p>
+<input type="password" name="password" class="sign-form space" placeholder="Enter your password"  autocomplete="off" required > 
+    <button type="submit" class="btn btn-primary ">Login </button>
+    </form>  
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/javascript">  
+        function matchpass(){  
+
+        var uName =document.formName.userName.value;  
+        var username = "shubham031";  
+        var password = "shubham031";  
+          
+        if(username == uName){  
+        return true;  
+        }  
+        else{  
+            swal("Opps", "Please check username or password!", "warning"); 
+        return false;  
+        }  
+        }  
+        </script>  
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+           
+<%- include('partials/footer.ejs'); %>
